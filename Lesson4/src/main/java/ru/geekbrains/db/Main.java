@@ -25,39 +25,19 @@ import java.sql.SQLException;
 
 public class Main {
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) {
 
-    DBConnection dbConnection = new SQLiteJDBCConnector();
-    dbConnection.connect();
-    Query query = new SQLQuery();
-    query.getConnection(dbConnection);
+        DBConnection dbConnection = new SQLiteJDBCConnector();
+        dbConnection.connect();
+        Query query = new SQLQuery();
+        query.getConnection(dbConnection);
 
-    query.preparingForWorkInBD();
-    query.errorInSchedule();
+        query.preparingForWorkInBD();
 
+//    query.errorInSchedule();
+//    query.breakInSchedule();
+        query.movieStats();
     }
-
-//    Calendar calendar = new GregorianCalendar();
-//        calendar.setTime(new Date());
-//        calendar.set(2022, 11, 21, 9, 00, 00);
-//
-//    SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-//    String newDate = date.format(calendar.getTime());
-////        System.out.println(newDate);
-//        try {
-//        Class.forName(className);
-//        Connection connection = DriverManager.getConnection(DB_URL);
-//
-//        Statement statement = connection.createStatement();
-//
-//        statement.execute("CREATE TABLE if not exists mydata (id integer primary key autoincrement, date_time text not null unique );");
-////            statement.execute("INSERT INTO mydata (date_time) values ('"+newDate+"');");
-//        ResultSet rs = statement.executeQuery("select substr(date_time,12,19) from mydata;");
-//        while (rs.next()){
-//            String date1 = rs.getString(1);
-//            System.out.println(date1);
-//        }
-
 
 
 //}
